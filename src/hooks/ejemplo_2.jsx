@@ -30,7 +30,7 @@ function Ejemplo2() {
 
 	return (
 		<div>
-			<h1>***** Ejemplo useState, useRef y useEffect *******</h1>
+			<h2>***** Ejemplo useState, useRef y useEffect *******</h2>
 			<h2>{count1}</h2>
 			<h2>{count2}</h2>
 			<h4 ref={myRef} >Ejemplo de elemento referenciado</h4>
