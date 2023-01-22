@@ -1,7 +1,13 @@
 import { useEffect, useState } from 'react';
+import DidUpdate from './did_update';
 
 function DidMount() {
 	const [user, setUser] = useState([]);
+	const [num, setNum] = useState(0);
+
+	const handleNum = () => {
+		setNum(num + 1);
+	};
 
 	/* El useEffect con los conchetes vacios, replica el comportamiento de
 		ComponentDidMount el cual es el método de componentes de clases
@@ -25,6 +31,9 @@ function DidMount() {
 					<img style={{borderRadius: '50%'}} src={user[4].avatar} alt="profile" />
 				</div>
 			) : <div>Loading...</div>}
+			<button onClick={handleNum}>Aumentar</button>
+			<hr />
+			<DidUpdate num={num} />
 		</div>
 	);
 }

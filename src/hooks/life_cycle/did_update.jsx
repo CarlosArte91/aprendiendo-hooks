@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { changeTask } from '../../redux/slices/task_slice';
 
-function DidUpdate() {
+function DidUpdate({ num }) {
 	const dispatch = useDispatch();
 
 	const reduxState = useSelector((state) => state.tasks.text);
@@ -30,6 +30,7 @@ function DidUpdate() {
 	return (
 		<div>
 			<h2>DidUpdate</h2>
+			<h2>{num}</h2>
 			<p>{reduxState}</p>
 			<p>{reactState}</p>
 			<div style={{
